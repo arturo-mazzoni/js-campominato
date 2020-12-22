@@ -25,12 +25,12 @@ while (numeriRandom.length < 16) {
 }
 console.log(numeriRandom);
 
-var sentinella = true;
+sentinella = true;
 
-while (numeriUtente.length < 16 && sentinella == true) {
+while (numeriUtente.length < 84 && sentinella == true ) {
   var n = parseInt(prompt("inserisci un numero da 1 a 100"));
 
-  if (numeriUtente.includes(n) == false) {
+  if (numeriUtente.includes(n) == false && numeriRandom.includes(n) == false) {
     numeriUtente.push(n);
   } else {
     alert("Hai perso");
@@ -38,6 +38,8 @@ while (numeriUtente.length < 16 && sentinella == true) {
   }
 }
 console.log(numeriUtente);
+
+alert("Il tuo punteggio è " + numeriUtente.length);
 
 
 //FUNCTIONS
